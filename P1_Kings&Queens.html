@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kings & Queens Family Salon | LB Nagar, Hyderabad</title>
+<meta name="description" content="Kings & Queens Family Salon, LB Nagar, Hyderabad — Unisex salon for hair styling, bridal makeup, facials, waxing & more. Rated 4.9/5.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath d=%27M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z%27 fill=%27%23c9a227%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0c;
+    --panel:#141216;
+    --panel-2:#1c1a1f;
+    --gold:#c9a227;
+    --gold-soft:#e7cd7a;
+    --ivory:#f3ede0;
+    --muted:#a89f8d;
+    --burgundy:#5c1a1a;
+    --line:rgba(201,162,39,0.25);
+    --radius:2px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ivory);
+    font-family:'Jost',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Cinzel',Georgia,'Times New Roman',serif;letter-spacing:0.04em;font-weight:600;color:var(--ivory);}
+  .eyebrow{
+    font-family:'Jost',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.35em;
+    font-size:0.72rem;
+    color:var(--gold);
+    display:inline-block;
+    margin-bottom:14px;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  section{padding:110px 0;position:relative;}
+
+  /* ---------- crown divider signature ---------- */
+  .divider{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 46px;width:fit-content;}
+  .divider .rule{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+  .divider svg{width:26px;height:26px;flex-shrink:0;}
+
+  /* ---------- header / nav ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(10,10,12,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{max-width:1120px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Cinzel',Georgia,'Times New Roman',serif;font-size:1.05rem;letter-spacing:0.08em;color:var(--ivory);}
+  .brand svg{width:24px;height:24px;}
+  .brand .amp{color:var(--gold);}
+  .nav-links{display:flex;gap:34px;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;}
+  .nav-links a{position:relative;padding-bottom:4px;transition:color .25s;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{
+    display:flex;gap:12px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 24px;
+    font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;
+    border:1px solid var(--gold);
+    border-radius:var(--radius);
+    transition:all .25s ease;
+    white-space:nowrap;
+  }
+  .btn-gold{background:var(--gold);color:#0a0a0c;font-weight:500;}
+  .btn-gold:hover{background:var(--gold-soft);border-color:var(--gold-soft);}
+  .btn-outline{border-color:var(--line);color:var(--ivory);}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+  .hamburger span{width:24px;height:1.5px;background:var(--gold);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+    position:relative;
+    padding-top:90px;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(201,162,39,0.14), transparent 60%),
+      linear-gradient(180deg, #0a0a0c 0%, #0d0b0e 100%);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(201,162,39,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,162,39,0.05) 1px, transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(ellipse at center, black 0%, transparent 70%);
+    mask-image:radial-gradient(ellipse at center, black 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-crown{width:64px;height:64px;margin-bottom:26px;position:relative;z-index:1;}
+  .hero h1{
+    font-size:clamp(2.4rem,6vw,4.6rem);
+    line-height:1.08;
+    position:relative;z-index:1;
+    max-width:900px;
+  }
+  .hero h1 .amp{color:var(--gold);font-style:normal;}
+  .hero .rating{
+    font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--gold-soft);
+    margin:20px 0 6px;
+    position:relative;z-index:1;
+  }
+  .hero p.sub{
+    max-width:520px;
+    color:var(--muted);
+    font-size:1rem;
+    margin:14px auto 40px;
+    position:relative;z-index:1;
+  }
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
+  .hero-address{
+    margin-top:56px;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em;
+    position:relative;z-index:1;
+  }
+
+  /* ---------- about ---------- */
+  .about{background:var(--panel);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .about-visual{
+    aspect-ratio:4/5;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    display:flex;align-items:center;justify-content:center;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(201,162,39,0.12), transparent 55%),
+      linear-gradient(160deg,#161318,#0c0b0d);
+    position:relative;
+  }
+  .about-visual svg{width:120px;height:120px;opacity:0.85;}
+  .about-text .eyebrow{margin-bottom:18px;}
+  .about-text h2{font-size:2.1rem;margin-bottom:22px;}
+  .about-text p{color:var(--muted);margin-bottom:16px;max-width:480px;}
+  .stats{display:flex;gap:40px;margin-top:36px;}
+  .stat b{display:block;font-family:'Cinzel',Georgia,'Times New Roman',serif;font-size:1.8rem;color:var(--gold);}
+  .stat span{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+
+  /* ---------- services ---------- */
+  .services-head{text-align:center;max-width:600px;margin:0 auto 64px;}
+  .services-head h2{font-size:2.3rem;}
+  .services-head p{color:var(--muted);margin-top:16px;}
+  .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .service-card{background:var(--bg);padding:36px 32px;}
+  .service-card .row{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .service-card svg{width:26px;height:26px;flex-shrink:0;color:var(--gold);}
+  .service-card h3{font-size:1.15rem;letter-spacing:0.02em;}
+  .service-list{list-style:none;}
+  .service-list li{
+    display:flex;justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px dashed rgba(201,162,39,0.18);
+    font-size:0.92rem;color:var(--muted);
+  }
+  .service-list li:last-child{border-bottom:none;}
+  .service-list li span.price{color:var(--gold-soft);font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:1.05rem;}
+  .price-note{text-align:center;color:var(--muted);font-size:0.8rem;margin-top:28px;font-style:italic;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;}
+
+  /* ---------- gallery ---------- */
+  .gallery{background:var(--panel);}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px;}
+  .gallery-item{
+    aspect-ratio:1/1;
+    border:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    background:linear-gradient(150deg,#1c1922,#100e12);
+    transition:transform .3s ease, border-color .3s ease;
+    cursor:default;
+  }
+  .gallery-item:hover{transform:translateY(-4px);border-color:var(--gold);}
+  .gallery-item svg{width:34px;height:34px;color:var(--gold);opacity:0.8;}
+  .gallery-item span{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);}
+  .gallery-note{text-align:center;color:var(--muted);font-size:0.85rem;margin-top:28px;}
+
+  /* ---------- testimonials / feedback ---------- */
+  .feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+  .testimonials{display:flex;flex-direction:column;gap:28px;}
+  .testimonial{
+    border-left:2px solid var(--gold);
+    padding:6px 0 6px 24px;
+  }
+  .testimonial p{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-style:italic;font-size:1.15rem;color:var(--ivory);margin-bottom:10px;}
+  .testimonial span{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:6px;font-size:0.9rem;}
+
+  .feedback-form h2{font-size:1.9rem;margin-bottom:10px;}
+  .feedback-form>p{color:var(--muted);margin-bottom:30px;font-size:0.9rem;}
+  .form-row{margin-bottom:20px;}
+  .form-row label{display:block;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:8px;}
+  .form-row input,.form-row textarea{
+    width:100%;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    color:var(--ivory);
+    padding:13px 14px;
+    font-family:'Jost',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:0.92rem;
+    border-radius:var(--radius);
+  }
+  .form-row input:focus,.form-row textarea:focus{outline:none;border-color:var(--gold);}
+  .star-select{display:flex;gap:8px;font-size:1.5rem;cursor:pointer;color:var(--muted);}
+  .star-select span{transition:color .15s;}
+  .star-select span.active,.star-select span:hover,.star-select span:hover ~ span{color:var(--gold);}
+  .star-select{flex-direction:row-reverse;justify-content:flex-end;}
+  #feedback-success{
+    display:none;margin-top:18px;padding:14px 16px;
+    border:1px solid var(--gold);color:var(--gold-soft);font-size:0.85rem;border-radius:var(--radius);
+  }
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--panel);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);}
+  .contact-info{padding:56px;}
+  .contact-info h2{font-size:2rem;margin-bottom:24px;}
+  .contact-item{display:flex;gap:16px;margin-bottom:26px;align-items:flex-start;}
+  .contact-item svg{width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:2px;}
+  .contact-item h4{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold-soft);margin-bottom:4px;}
+  .contact-item p{color:var(--muted);font-size:0.92rem;}
+  .contact-buttons{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+  .map-frame{min-height:420px;border:none;filter:grayscale(0.4) invert(0.92) contrast(0.9);}
+
+  /* ---------- footer ---------- */
+  footer{padding:56px 0 34px;text-align:center;}
+  footer .brand{justify-content:center;margin-bottom:18px;}
+  footer p{color:var(--muted);font-size:0.8rem;}
+  footer .foot-links{display:flex;gap:24px;justify-content:center;margin:20px 0;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;}
+
+  /* ---------- floating whatsapp ---------- */
+  .float-whatsapp{
+    position:fixed;bottom:26px;right:26px;z-index:200;
+    width:58px;height:58px;border-radius:50%;
+    background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 24px rgba(0,0,0,0.4);
+    animation:pulse 2.4s infinite;
+  }
+  .float-whatsapp svg{width:28px;height:28px;fill:#fff;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5),0 6px 24px rgba(0,0,0,0.4);}
+    70%{box-shadow:0 0 0 14px rgba(37,211,102,0),0 6px 24px rgba(0,0,0,0.4);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 6px 24px rgba(0,0,0,0.4);}
+  }
+
+  @media (max-width:860px){
+    .nav-links,.nav-cta{display:none;}
+    .hamburger{display:flex;}
+    .about-grid,.feedback-grid,.contact-grid{grid-template-columns:1fr;}
+    .service-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    section{padding:76px 0;}
+    .contact-info{padding:36px 24px;}
+  }
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important;}}
+  #mnav a{padding:4px 0;font-size:0.9rem;letter-spacing:0.08em;text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z"/></svg>Kings <span class="amp">&amp;</span> Queens</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#feedback">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:+919491519070" class="btn btn-outline">Call Now</a>
+      <a href="https://wa.me/919491519070" target="_blank" class="btn btn-gold">WhatsApp</a>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div id="mnav" style="display:none;flex-direction:column;padding:0 28px 22px;gap:16px;border-top:1px solid var(--line);"
+       onclick="this.style.display='none'">
+    <a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a>
+    <a href="#feedback">Reviews</a><a href="#contact">Contact</a>
+    <a href="https://wa.me/919491519070" class="btn btn-gold" style="width:fit-content;">WhatsApp Us</a>
+  </div>
+</header>
+
+<script>
+  const mnav=document.getElementById('mnav');
+  document.querySelector('.hamburger').addEventListener('click',()=>{
+    mnav.style.display = mnav.style.display==='none' ? 'flex' : 'none';
+  });
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-crown" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1"><path d="M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z"/></svg>
+  <h1>Kings <span class="amp">&amp;</span> Queens<br>Family Salon</h1>
+  <p class="rating">★★★★★ Rated 4.9/5 by 117+ happy clients</p>
+  <p class="sub">Unisex hair styling, bridal makeup, facials, waxing &amp; nail care — crafted with care in the heart of LB Nagar.</p>
+  <div class="hero-ctas">
+    <a href="https://wa.me/919491519070?text=Hi!%20I'd%20like%20to%20book%20an%20appointment" target="_blank" class="btn btn-gold">Book on WhatsApp</a>
+    <a href="tel:+919491519070" class="btn btn-outline">Call Now</a>
+  </div>
+  <p class="hero-address">Plot No. C-2, 3rd Floor, Chitra Towers, Huda Chitra Layout, LB Nagar, Hyderabad – 500074</p>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="0.8"><path d="M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z"/></svg>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow">Our Story</span>
+      <h2>A salon built on<br>care, craft &amp; comfort</h2>
+      <p>Since 2020, Kings &amp; Queens Family Salon has been LB Nagar's trusted address for hair, skin and bridal beauty. Every client — man, woman or bride-to-be — is treated like royalty, with experienced stylists and premium products.</p>
+      <p>From a quick trim to full bridal glam, we bring warmth, skill and attention to every chair in the salon.</p>
+      <div class="stats">
+        <div class="stat"><b>4.9</b><span>Google Rating</span></div>
+        <div class="stat"><b>117+</b><span>Happy Reviews</span></div>
+        <div class="stat"><b>5+</b><span>Years Serving LB Nagar</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="divider">
+      <span class="rule"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.2"><path d="M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z"/></svg>
+      <span class="rule"></span>
+    </div>
+    <div class="services-head">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Services &amp; Pricing</h2>
+      <p>A glimpse of our menu — ask in-store or on WhatsApp for our full price list and current offers.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 9a3 3 0 100-6 3 3 0 000 6zM6 21a3 3 0 100-6 3 3 0 000 6zM20 4L8.5 12M8.5 12L20 20M8.5 12L4 12"/></svg>
+          <h3>Hair Care</h3>
+        </div>
+        <ul class="service-list">
+          <li>Hair Cut &amp; Styling <span class="price">from ₹150</span></li>
+          <li>Hair Spa &amp; Treatment <span class="price">from ₹600</span></li>
+          <li>Hair Colour / Highlights <span class="price">from ₹800</span></li>
+          <li>Bridal Hair-Do <span class="price">on request</span></li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <h3>Skin Care</h3>
+        </div>
+        <ul class="service-list">
+          <li>4-Layer Whitening Facial <span class="price">from ₹500</span></li>
+          <li>Seaweed / Gold Facial <span class="price">from ₹900</span></li>
+          <li>Cleanup &amp; De-tan <span class="price">from ₹300</span></li>
+          <li>Bridal / Groom Makeup <span class="price">on request</span></li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M4 6h16M6 12h12M8 18h8"/></svg>
+          <h3>Hair Removal</h3>
+        </div>
+        <ul class="service-list">
+          <li>Threading — Eyebrows <span class="price">from ₹30</span></li>
+          <li>Sugar Waxing — Half Legs <span class="price">from ₹250</span></li>
+          <li>Sugar Waxing — Full Body <span class="price">from ₹900</span></li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2c-2 3-5 5-5 9a5 5 0 0010 0c0-4-3-6-5-9z"/></svg>
+          <h3>Nails</h3>
+        </div>
+        <ul class="service-list">
+          <li>Nail Cut &amp; Filing <span class="price">from ₹100</span></li>
+          <li>Pedicure <span class="price">from ₹350</span></li>
+          <li>Manicure <span class="price">from ₹300</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">Prices are indicative starting rates — final pricing may vary. Confirm on WhatsApp.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="eyebrow">A Peek Inside</span>
+      <h2>Gallery</h2>
+      <p>Real salon &amp; work photos coming soon — here's a preview of what you'll find.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 9a3 3 0 100-6 3 3 0 000 6zM6 21a3 3 0 100-6 3 3 0 000 6zM20 4L8.5 12M8.5 12L20 20M8.5 12L4 12"/></svg><span>Hair Styling</span></div>
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>Skin Care</span></div>
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20l6-14 6 14M6.5 14h7"/><path d="M17 4l3 3-3 3"/></svg><span>Bridal Makeup</span></div>
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2c-2 3-5 5-5 9a5 5 0 0010 0c0-4-3-6-5-9z"/></svg><span>Nail Art</span></div>
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v20M4 6h16M6 12h12M8 18h8"/></svg><span>Waxing</span></div>
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 12c2-4 6-6 9-6s7 2 9 6c-2 4-6 6-9 6s-7-2-9-6z"/><circle cx="12" cy="12" r="2.5"/></svg><span>Makeover</span></div>
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z"/></svg><span>Groom Styling</span></div>
+      <div class="gallery-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3v4M12 17v4M4.2 6.2l2.8 2.8M17 15l2.8 2.8M3 12h4M17 12h4M4.2 17.8L7 15M17 9l2.8-2.8"/></svg><span>Hair Spa</span></div>
+    </div>
+    <p class="gallery-note">Have great salon photos? Send them on WhatsApp and we'll feature them here.</p>
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback">
+  <div class="wrap feedback-grid">
+    <div>
+      <span class="eyebrow">Client Love</span>
+      <h2 style="font-size:2rem;margin-bottom:34px;">What our clients say</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Absolutely loved my bridal makeup — the team made me feel like royalty on my big day."</p>
+          <span>— Priya, LB Nagar</span>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Best haircut I've had in Hyderabad. Clean salon, friendly staff, great value."</p>
+          <span>— Rahul, LB Nagar</span>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"The facial left my skin glowing for a week. Will definitely be back!"</p>
+          <span>— Sindhu, LB Nagar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="feedback-form">
+      <h2>Leave Your Feedback</h2>
+      <p>We'd love to hear about your visit — it helps us serve you better.</p>
+      <form id="fbForm" onsubmit="return submitFeedback(event)">
+        <div class="form-row">
+          <label>Your Rating</label>
+          <div class="star-select" id="starSelect">
+            <span data-v="5">★</span><span data-v="4">★</span><span data-v="3">★</span><span data-v="2">★</span><span data-v="1">★</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Name</label>
+          <input type="text" name="fb_name" required placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" name="fb_phone" placeholder="Your number (optional)">
+        </div>
+        <div class="form-row">
+          <label>Your Feedback</label>
+          <textarea rows="4" name="fb_msg" required placeholder="Tell us about your experience..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Submit Feedback</button>
+        <div id="feedback-success">✓ Thank you! WhatsApp has opened with your feedback — just press Send.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  let rating = 0;
+  document.querySelectorAll('#starSelect span').forEach(star=>{
+    star.addEventListener('click',()=>{
+      rating = star.dataset.v;
+      document.querySelectorAll('#starSelect span').forEach(s=>{
+        s.classList.toggle('active', Number(s.dataset.v) <= Number(rating));
+      });
+    });
+  });
+  function submitFeedback(e){
+    e.preventDefault();
+    const f=e.target;
+    const name=f.elements['fb_name'].value.trim();
+    const phone=f.elements['fb_phone'].value.trim();
+    const msg=f.elements['fb_msg'].value.trim();
+    const stars=rating?('★'.repeat(rating)+' ('+rating+'/5)'):'Not rated';
+    const text='Feedback for Kings & Queens Family Salon%0A'
+      +'Rating: '+encodeURIComponent(stars)+'%0A'
+      +'Name: '+encodeURIComponent(name)+'%0A'
+      +(phone?'Phone: '+encodeURIComponent(phone)+'%0A':'')
+      +'Feedback: '+encodeURIComponent(msg);
+    window.open('https://wa.me/919491519070?text='+text,'_blank');
+    document.getElementById('feedback-success').style.display='block';
+    f.reset(); rating=0;
+    document.querySelectorAll('#starSelect span').forEach(s=>s.classList.remove('active'));
+    return false;
+  }
+</script>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="divider">
+      <span class="rule"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.2"><path d="M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z"/></svg>
+      <span class="rule"></span>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Visit / Reach Us</h2>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><h4>Address</h4><p>Plot No. C-2, 3rd Floor, Chitra Towers Building,<br>Huda Chitra Layout, LB Nagar,<br>Hyderabad – 500074</p></div>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.8 2z"/></svg>
+          <div><h4>Call</h4><p>+91 94915 19070</p></div>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <div><h4>WhatsApp</h4><p>+91 94915 19070</p></div>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><h4>Hours</h4><p>Open Daily · 9:00 AM – 9:00 PM</p></div>
+        </div>
+        <div class="contact-buttons">
+          <a href="https://wa.me/919491519070?text=Hi!%20I'd%20like%20to%20book%20an%20appointment" target="_blank" class="btn btn-gold">Chat on WhatsApp</a>
+          <a href="tel:+919491519070" class="btn btn-outline">Call Now</a>
+        </div>
+      </div>
+      <iframe class="map-frame" title="Kings & Queens Family Salon location map" loading="lazy"
+        src="https://www.google.com/maps?q=17.3543352,78.5472618&z=17&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:#c9a227;"><path d="M2 8l3 3 4-6 3 6 3-6 4 6 3-3-2 11H4L2 8z"/></svg>Kings <span class="amp" style="color:#c9a227;">&amp;</span> Queens</div>
+    <div class="foot-links">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </div>
+    <p>© 2026 Kings &amp; Queens Family Salon, LB Nagar, Hyderabad. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919491519070?text=Hi!%20I'd%20like%20to%20book%20an%20appointment" target="_blank" class="float-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.34.68 4.52 1.86 6.36L4 29l7.85-1.82A11.9 11.9 0 0016 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.6c-2.02 0-3.9-.58-5.48-1.58l-.39-.24-4.65 1.08 1.1-4.53-.26-.4A9.55 9.55 0 016.4 15c0-5.3 4.31-9.6 9.6-9.6s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6zm5.27-7.19c-.29-.14-1.71-.84-1.97-.94-.26-.1-.46-.14-.65.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.58.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.65-1.57-.89-2.15-.23-.56-.47-.48-.65-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 1-1 2.42 0 1.43 1.02 2.81 1.17 3 .14.19 2.01 3.08 4.88 4.31.68.29 1.21.47 1.63.6.68.22 1.3.19 1.79.11.55-.08 1.71-.7 1.95-1.37.24-.68.24-1.25.17-1.37-.07-.12-.26-.19-.55-.33z"/></svg>
+</a>
+
+</body>
+</html>
